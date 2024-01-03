@@ -1,0 +1,57 @@
+opne ai responce for prompt: Jarvis using artificial intelligence write a program in Python Pandas face using Turtle 
+ ****************************
+
+ graphics
+
+import turtle
+import pandas as pd
+
+#Create a screen
+screen = turtle.Screen()
+screen.title("Python Pandas Face")
+screen.bgcolor("white")
+
+#Create a turtle for drawing the face
+face = turtle.Turtle()
+face.speed(0)
+
+#Set the starting position of the turtle
+face.penup()
+face.goto(0, -200)
+face.pendown()
+
+#Create a circle for the face
+face.color("yellow")
+face.begin_fill()
+face.circle(200)
+face.end_fill()
+
+#Create two smaller circles for the eyes
+face.penup()
+face.goto(-70, 60)
+face.pendown()
+face.begin_fill()
+face.circle(40)
+face.end_fill()
+
+face.penup()
+face.goto(70, 60)
+face.pendown()
+face.begin_fill()
+face.circle(40)
+face.end_fill()
+
+#Create a curved line for the smile
+face.penup()
+face.goto(-100, -50)
+face.color("black")
+face.pendown()
+face.pensize(5)
+face.right(90)
+face.circle(100, 180)
+
+#Write text using pandas
+text = turtle.Turtle()
+text.hideturtle()
+text.penup()
+text.goto(0, 250)

@@ -1,0 +1,45 @@
+opne ai responce for prompt: using artificial intelligence write a program in Python 
+ ****************************
+
+
+
+#Import necessary libraries
+import random
+import numpy as np
+
+#Define function to generate random integers
+def generate_random_ints(num):
+  random_ints = []
+  for i in range(num):
+    random_ints.append(random.randint(0,100))
+  return random_ints
+
+#Define function to generate random floats
+def generate_random_floats(num):
+  random_floats = []
+  for i in range(num):
+    random_floats.append(random.uniform(0,100))
+  return random_floats
+
+#Define function to generate random strings
+def generate_random_strings(num, length):
+  random_strings = []
+  for i in range(num):
+    str=""
+    for j in range(length):
+      str += chr(random.randint(97,122))
+    random_strings.append(str)
+  return random_strings
+
+#Define function to create an array of random data
+def create_random_data(num):
+  random_data = []
+  for i in range(num):
+    random_data.append(random.choice([generate_random_ints(1), generate_random_floats(1), generate_random_strings(1,5)]))
+  return random_data
+
+#Generate a list of random data
+data = create_random_data(10)
+
+#Convert the list into a numpy array
+data

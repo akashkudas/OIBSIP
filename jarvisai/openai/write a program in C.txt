@@ -1,0 +1,41 @@
+opne ai responce for prompt: using artificial intelligence write a program in C 
+ ****************************
+
+++
+#include <iostream>
+using namespace std;
+
+//Function to check if move is legal
+bool isLegalMove(int grid[3][3], int row, int col) {
+    //Check if position is already filled
+    if (grid[row][col] != 0) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+//Function to check if game is in draw state
+bool isDraw(int grid[3][3]) {
+    //Check if all positions are filled
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (grid[i][j] == 0) {
+                return false;
+            }
+        }
+    }
+    //No empty positions means draw
+    return true;
+}
+
+//Function to check if game is over
+bool gameOver(int grid[3][3]) {
+    //Check for row win
+    for (int i = 0; i < 3; i++) {
+        if (grid[i][0] == grid[i][1] && grid[i][1] == grid[i][2]) {
+            return true;
+        }
+    }
+   
